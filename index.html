@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CV ATS</title>
+</head>
+
+<body>
+    <div class="button cetak default">
+        <button onclick="cetak()">CETAK PDF</button>
+    </div>
+    <div class="util">
+        <div class="confirm button add-edu">
+            <button onclick="addEdu()">Tambah Pendidikan</button>
+        </div>
+        <div class="confirm button add-exp">
+            <button onclick="addExp()">Tambah Pengalaman</button>
+        </div>
+        <div class="confirm button add-skill">
+            <button onclick="addSkill()">Tambah Kemampuan</button>
+        </div>
+        <div class="confirm button add-cert">
+            <button onclick="addCert()">Tambah Sertifikasi</button>
+        </div>
+    </div>
+    <div class="util">
+        <div class="default button add-edu">
+            <button onclick="removeEdu()">Hapus Pendidikan</button>
+        </div>
+        <div class="default button add-exp">
+            <button onclick="removeExp()">Hapus Pengalaman</button>
+        </div>
+        <div class="default button add-skill">
+            <button onclick="removeSkill()">Hapus Kemampuan</button>
+        </div>
+        <div class="default button add-cert">
+            <button onclick="removeCert()">Hapus Sertifikasi</button>
+        </div>
+    </div>
+
+    
+    <div id="cv">
+        <h2 contenteditable="true">NAMA PELAMAR</h2>
+        <div class="credentials">
+            <p contenteditable="true">Nomor HP</p> |
+            <a contenteditable="true" href="">email</a> |
+            <a contenteditable="true" href="">linkedin profile</a>
+        </div>
+        <div contenteditable="true" class="domicile">
+            <p>Domisili</p>
+        </div>
+        <div contenteditable="true" class="bio">
+            <p>Pengenalan singkat</p>
+        </div>
+
+        <h3>PENDIDIKAN</h3>
+        <hr>
+        <div class="container">
+            <div class="education">
+                <div  class="head-edu">
+                    <b contenteditable="true">Nama sekolah/Universitas</b>
+                    <b contenteditable="true">Tahun Masuk - Lulus</b>
+                </div>
+                <div  class="majoring">
+                    <p contenteditable="true">Jurusan</p>
+                    <b contenteditable="true">Nilai/IPK</b>
+                </div>
+            </div>
+        </div>
+
+
+        <h3>PENGALAMAN KERJA</h3>
+        <hr>
+        <div class="container-exp">
+            <div class="exp">
+                <div class="head-exp">
+                    <b contenteditable="true">Nama Instansi</b>
+                    <b contenteditable="true">Tahun Masuk - Keluar</b>
+                </div>
+                <p contenteditable="true">Jabatan/Posisi</p>
+                <div class="uraiankerja" contenteditable="true">
+                    <li>Uraian Pekerjaan</li>
+                </div>
+              
+            </div>
+        </div>
+
+        <h3>KEAHLIAN</h3>
+        <hr>
+        <div  class="skill">
+            <li contenteditable="true">Uraian Kemampuan</li>
+        </div>
+
+        <h3 class="certif">SERTIFIKASI PELATIHAN</h3>
+        <hr class="certline">
+        <div class="container-cert">
+            <div class="cert">
+                <div class="head-cert">
+                    <b contenteditable="true">Nama Pelatihan - Nomor Sertifikat</b>
+                    <b contenteditable="true">Tahun mulai - Selesai</b>
+                </div>
+                <div contenteditable="true" class="uraianpelatihan">
+                    <li>Uraian Pelatihan</li>
+                </div>
+                
+            </div>
+           
+        </div>
+    </div>
+
+    <script src="html2pdf.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
